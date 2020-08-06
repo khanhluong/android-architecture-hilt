@@ -3,13 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/charactersFragment">
+    app:startDestination="@id/characterViewPager2Fragment">
+
+    <fragment
+        android:id="@+id/characterViewPager2Fragment"
+        android:name="com.hk.androidarchitecturesampleapp.ui.CharacterViewPage2Fragment"
+        android:label="Characters"
+        tools:layout="@layout/character_detail_fragment">
+        <action
+            android:id="@+id/action_charactersFragment_to_characterDetailFragment"
+            app:destination="@id/characterDetailFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/charactersFragment"
         android:name="com.hk.androidarchitecturesampleapp.ui.characters.CharactersFragment"
         android:label="Characters"
-        tools:layout="@layout/characters_fragment" >
+        tools:layout="@layout/characters_fragment">
         <action
             android:id="@+id/action_charactersFragment_to_characterDetailFragment"
             app:destination="@id/characterDetailFragment" />
